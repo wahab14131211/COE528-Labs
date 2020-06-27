@@ -26,7 +26,6 @@ public class Flight {
     }
     
     //<editor-fold desc="Implement getter functions" defaultstate="collapsed">
-    
     public int getFlightNumber(){
         return this.flightNumber;
     }
@@ -86,7 +85,7 @@ public class Flight {
     }
     //</editor-fold>
     
-    public boolean bootASeat(){
+    public boolean bookASeat(){
         if(this.numberOfSeatsLeft > 0){
             this.numberOfSeatsLeft--;
             return true;

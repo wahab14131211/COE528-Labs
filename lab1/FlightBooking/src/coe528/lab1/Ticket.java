@@ -16,6 +16,12 @@ public class Ticket {
     private int ID;
     private static int totalTickets = 0;
 
+    /**
+     *
+     * @param p
+     * @param f
+     * @param price
+     */
     public Ticket(Passenger p, Flight f, double price){
         this.passenger = p;
         this.flight = f;
@@ -61,10 +67,6 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return String.format("%s, Flight %d, %s to %s, %s, original price: %f$, ticket price: $%f",/*TODO: fill in variable*/"Temp" , this.flight.getFlightNumber(), this.flight.getOrigin(), this.flight.getDestination(), this.flight.getDepartureTime(), this.flight.getOriginalPrice(), this.price); 
+        return String.format("%s, Flight %d, %s to %s, %s, original price: $%.2f, ticket price: $%.2f",this.passenger.getName() , this.flight.getFlightNumber(), this.flight.getOrigin(), this.flight.getDestination(), this.flight.getDepartureTime(), this.flight.getOriginalPrice(), this.price); 
     }
-    
-    
-    
-    
 }

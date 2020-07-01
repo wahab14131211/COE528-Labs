@@ -12,6 +12,12 @@ package coe528.lab1;
 public class Member extends Passenger{
     private int yearsOfMembership;
     
+    /**
+     *
+     * @param name
+     * @param age
+     * @param yearsOfMembership
+     */
     public Member(String name, int age, int yearsOfMembership){
         super(name, age);
         this.yearsOfMembership = yearsOfMembership;
@@ -36,5 +42,10 @@ public class Member extends Passenger{
         }else{
             return p;
         }
-    } 
+    }
+    
+    @Override
+    public String toString(){
+        return String.format("Member --> Name:%s, Age:%d, Years of Membership:%d", this.name, this.age, this.yearsOfMembership);
+    }
 }

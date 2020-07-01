@@ -14,8 +14,20 @@ public class Flight {
     private double originalPrice;
     private String origin, destination, departureTime;
     
+    /**
+     *
+     * @param flightNumber
+     * @param origin
+     * @param destination
+     * @param departureTime
+     * @param capacity
+     * @param originalPrice
+     */
     public Flight(int flightNumber, String origin, String destination, String departureTime, int capacity, double originalPrice){
-        //TODO: Throw illegal Argument Exception if origin and destination are the same
+        if(origin.equals(destination)){
+            throw new IllegalArgumentException("Origin is the same as Destination"); //If origin is the same as destination, no flight is needed
+        }
+        //initialize instance variables
         this.flightNumber = flightNumber;
         this.origin = origin;
         this.destination = destination;
@@ -95,7 +107,7 @@ public class Flight {
     
     @Override
     public String toString(){
-        return String.format("Flight %d, %s to %s, %s, original price: %f$", this.flightNumber, this.origin, this.destination, this.departureTime, this.originalPrice);
+        return String.format("Flight %d, %s to %s, %s, original price: $%.2f", this.flightNumber, this.origin, this.destination, this.departureTime, this.originalPrice);
     }
     
 }

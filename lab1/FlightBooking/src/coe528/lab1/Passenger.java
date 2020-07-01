@@ -13,6 +13,11 @@ public abstract class Passenger {
     String name;
     int age;
 
+    /**
+     *
+     * @param name
+     * @param age
+     */
     public Passenger(String name, int age) {
         this.name = name;
         this.age = age;
@@ -39,5 +44,8 @@ public abstract class Passenger {
     //</editor-fold>
     
     public abstract double applyDiscount(double p);
+    
+    @Override
+    public abstract String toString();
     
 }

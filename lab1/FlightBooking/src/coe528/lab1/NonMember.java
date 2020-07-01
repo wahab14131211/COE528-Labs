@@ -11,6 +11,11 @@ package coe528.lab1;
  */
 public class NonMember extends Passenger{
     
+    /**
+     *
+     * @param name
+     * @param age
+     */
     public NonMember(String name, int age){
         super(name, age);
     }
@@ -22,5 +27,10 @@ public class NonMember extends Passenger{
         }else{
             return p;
         }
-    } 
+    }
+    
+    @Override
+    public String toString(){
+        return String.format("NonMember --> Name:%s, Age:%d", this.name, this.age);
+    }
 }

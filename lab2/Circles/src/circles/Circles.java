@@ -33,12 +33,17 @@ public class Circles extends Application {
     public static final int MAX_COLS = 5;
     public static final int MAX_CELL_SIZE = 150;
     
+    private VBox root;
+    private Pane canvas;
+    private Button starter;
+    private int current_rows,current_cols,current_cell_size,current_x_scale,current_y_scale;
+    private HBox controls_box;
+    
     @Override
     public void start(Stage primaryStage) {
         root = new VBox(10);        
         root.setAlignment(Pos.CENTER);
         canvas = update_circles(MAX_ROWS,MAX_COLS,100,0,0);
-        addButtonHandler();  // You must write
 
         controls_box = initialize_controls();
         
@@ -48,14 +53,7 @@ public class Circles extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
-    
-    /**
-     * This method adds the handler to the button that gives
-     * this application its behavior.
-     */
-    private void addButtonHandler() {
-    }
-    
+     
     private Pane update_circles(int rows, int columns, int cell_size, int x_scale, int y_scale){
         Pane local_canvas = new Pane();
         Random rand = new Random(10);
@@ -146,17 +144,10 @@ public class Circles extends Application {
         primaryStage.show();
     }
     
-    private VBox root;
-    private Pane canvas;
-    private Button starter;
-    private int current_rows,current_cols,current_cell_size,current_x_scale,current_y_scale;
-    private HBox controls_box;
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         launch(args);
     }
-    
 }

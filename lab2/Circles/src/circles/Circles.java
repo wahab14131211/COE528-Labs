@@ -35,7 +35,6 @@ public class Circles extends Application {
     
     private VBox root;
     private Pane canvas;
-    private Button starter;
     private int current_rows,current_cols,current_cell_size,current_x_scale,current_y_scale;
     private HBox controls_box;
     
